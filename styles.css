@@ -1,0 +1,180 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+/* Navbar */
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.navbar li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar li a:hover,
+.navbar li a:focus {
+  color: #f8b500;
+  outline: none;
+  text-decoration: underline;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Container */
+.resource-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+/* Card style */
+.resource {
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  flex: 1 1 220px;
+  max-width: 220px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+/* Hover effect */
+.resource:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+/* Specific background gradients for variety */
+.resource:nth-child(1) {
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  color: #333;
+}
+
+.resource:nth-child(2) {
+  background: linear-gradient(135deg, #fceabb, #f8b500);
+  color: #5a3e00;
+}
+
+.resource:nth-child(3) {
+  background: linear-gradient(135deg, #cfd9df, #e2ebf0);
+  color: #2c3e50;
+}
+
+.resource:nth-child(4) {
+  background: linear-gradient(135deg, #f85032, #e73827);
+  color: #fff;
+}
+
+/* Headings */
+.resource h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraphs with pseudo-element for variety */
+.resource p {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+.resource p::first-letter {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* Images */
+.resource img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  background-color: #34495e;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-style: italic;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+  margin-top: 2rem;
+}
+
+/* Helpline section */
+.helpline-section {
+  text-align: center;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 740px) {
+  .resource-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .resource {
+    max-width: 90%;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+}
+
+/* Accessibility: Focus styles */
+.resource:focus {
+  outline: 3px solid #f8b500;
+  outline-offset: 4px;
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+  transition: outline 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
